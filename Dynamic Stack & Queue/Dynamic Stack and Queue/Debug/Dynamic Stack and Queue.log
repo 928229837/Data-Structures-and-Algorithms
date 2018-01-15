@@ -1,0 +1,11 @@
+﻿  test-cda.c
+  string.c
+  stack.c
+  real.c
+  queue.c
+  integer.c
+  da.c
+  cda.c
+  Generating Code...
+  Dynamic Stack and Queue.vcxproj -> C:\Users\hansheng\Desktop\CS test File\test\Dynamic Stack and Queue\Debug\Dynamic Stack and Queue.exe
+  Dynamic Stack and Queue.vcxproj -> C:\Users\hansheng\Desktop\CS test File\test\Dynamic Stack and Queue\Debug\Dynamic Stack and Queue.pdb (Full PDB)

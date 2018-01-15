@@ -1,0 +1,125 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include "cda.h"
+#include "integer.h"
+#include "real.h"
+#include "string.h"
+extern long random(void);
+extern void srandom(unsigned int seed);
+
+int
+main(void)
+    {
+    printf("CDA tester: 2,5\n");
+    printf("you can retrieve this test with:\n");
+    printf("wget beastie.cs.ua.edu/cs201/testing/0/cda-test-2-5.c\n");
+    printf("\noutput:\n\n");
+    CDA *d = newCDA(displayINTEGER);
+    insertCDAback(d,newINTEGER(609));
+    insertCDAback(d,newINTEGER(268));
+    insertCDAback(d,newINTEGER(48));
+    insertCDAback(d,newINTEGER(343));
+    insertCDAback(d,newINTEGER(506));
+    insertCDAback(d,newINTEGER(163));
+    insertCDAback(d,newINTEGER(987));
+    insertCDAback(d,newINTEGER(297));
+    insertCDAback(d,newINTEGER(48));
+    insertCDAback(d,newINTEGER(948));
+    insertCDAback(d,newINTEGER(452));
+    insertCDAback(d,newINTEGER(153));
+    insertCDAback(d,newINTEGER(375));
+    insertCDAback(d,newINTEGER(683));
+    insertCDAback(d,newINTEGER(483));
+    insertCDAback(d,newINTEGER(340));
+    insertCDAback(d,newINTEGER(220));
+    insertCDAback(d,newINTEGER(472));
+    insertCDAback(d,newINTEGER(256));
+    insertCDAback(d,newINTEGER(473));
+    insertCDAback(d,newINTEGER(566));
+    insertCDAback(d,newINTEGER(49));
+    insertCDAback(d,newINTEGER(166));
+    insertCDAback(d,newINTEGER(227));
+    printf("array d:");
+    visualizeCDA(stdout,d);
+    printf("\n");
+    CDA *e = newCDA(displayINTEGER);
+    insertCDAfront(e,newINTEGER(786));
+    insertCDAfront(e,newINTEGER(683));
+    insertCDAfront(e,newINTEGER(226));
+    insertCDAfront(e,newINTEGER(664));
+    insertCDAfront(e,newINTEGER(136));
+    insertCDAfront(e,newINTEGER(624));
+    insertCDAfront(e,newINTEGER(520));
+    insertCDAfront(e,newINTEGER(746));
+    insertCDAfront(e,newINTEGER(892));
+    insertCDAfront(e,newINTEGER(920));
+    insertCDAfront(e,newINTEGER(441));
+    insertCDAfront(e,newINTEGER(750));
+    insertCDAfront(e,newINTEGER(436));
+    insertCDAfront(e,newINTEGER(780));
+    insertCDAfront(e,newINTEGER(48));
+    insertCDAfront(e,newINTEGER(484));
+    insertCDAfront(e,newINTEGER(80));
+    insertCDAfront(e,newINTEGER(852));
+    insertCDAfront(e,newINTEGER(637));
+    insertCDAfront(e,newINTEGER(456));
+    insertCDAfront(e,newINTEGER(535));
+    insertCDAfront(e,newINTEGER(121));
+    insertCDAfront(e,newINTEGER(796));
+    insertCDAfront(e,newINTEGER(108));
+    insertCDAfront(e,newINTEGER(945));
+    insertCDAfront(e,newINTEGER(404));
+    insertCDAfront(e,newINTEGER(933));
+    insertCDAfront(e,newINTEGER(863));
+    insertCDAfront(e,newINTEGER(805));
+    insertCDAfront(e,newINTEGER(99));
+    insertCDAfront(e,newINTEGER(90));
+    insertCDAfront(e,newINTEGER(592));
+    insertCDAfront(e,newINTEGER(134));
+    insertCDAfront(e,newINTEGER(668));
+    insertCDAfront(e,newINTEGER(256));
+    insertCDAfront(e,newINTEGER(271));
+    insertCDAfront(e,newINTEGER(293));
+    insertCDAfront(e,newINTEGER(129));
+    insertCDAfront(e,newINTEGER(369));
+    insertCDAfront(e,newINTEGER(537));
+    insertCDAfront(e,newINTEGER(49));
+    insertCDAfront(e,newINTEGER(810));
+    insertCDAfront(e,newINTEGER(288));
+    insertCDAfront(e,newINTEGER(485));
+    insertCDAfront(e,newINTEGER(591));
+    insertCDAfront(e,newINTEGER(336));
+    insertCDAfront(e,newINTEGER(969));
+    insertCDAfront(e,newINTEGER(23));
+    printf("array e:");
+    visualizeCDA(stdout,e);
+    printf("\n");
+    printf("performing unionCDA(d,e)\n");
+    unionCDA(d,e);
+    printf("\n");
+    printf("array d: ");
+    displayCDA(stdout,d);
+    printf("\n");
+    printf("array e: ");
+    displayCDA(stdout,e);
+    printf("\n");
+    printf("performing unionCDA(d,e)\n");
+    unionCDA(d,e);
+    printf("\n");
+    printf("array d: ");
+    displayCDA(stdout,d);
+    printf("\n");
+    printf("array e: ");
+    displayCDA(stdout,e);
+    printf("\n");
+    printf("performing unionCDA(e,d)\n");
+    unionCDA(e,d);
+    printf("\n");
+    printf("array d: ");
+    displayCDA(stdout,d);
+    printf("\n");
+    printf("array e: ");
+    displayCDA(stdout,e);
+    printf("\n");
+    return 0;
+    }
